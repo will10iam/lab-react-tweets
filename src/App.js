@@ -1,11 +1,12 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
+import Feed from "./components/Feed";
 
 const tweetsArray = [
   {
     user: {
       name: "Thoughts of Dog®",
-      image: "https://i.imgur.com/b0EdHVV.jpg",
+      image: "https://i.imgur.com/b0EdHVV.png",
       handle: "dog_feelings",
     },
     timestamp: "1h ago",
@@ -37,7 +38,12 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+
+      <Feed> 
+        <Tweet tweet = { tweetsArray[0] } />
+        <Tweet tweet = { tweetsArray[1] } />
+        <Tweet tweet = { tweetsArray[2] } />
+      </Feed>
     </div>
   );
 }
